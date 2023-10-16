@@ -69,6 +69,12 @@
               @endif
             </div>
           </li> 
+
+          {{-- stampo giorno del treno --}}
+          <li class="d-flex justify-content-between list-group-item">
+            <div>giorno del treno</div>
+            <div>{{$train->date}}</div>
+          </li> 
         </ul>
       </div>
       @endforeach
