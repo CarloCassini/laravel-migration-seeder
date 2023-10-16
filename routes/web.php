@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/fintaHome', [PageController::class, 'index'])->name('home');
 
 Route::get('/', [TrainController::class, 'train_list'])->name('train_list');
+Route::get('/today', [TrainController::class, 'select_today'])->name('select_today');

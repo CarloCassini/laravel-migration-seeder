@@ -13,7 +13,8 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->dateTime('date', $precision = 0);
+            $table->dateTime('date')->nullable();
+            $table->string('test')->nullable();
             //
         });
     }
