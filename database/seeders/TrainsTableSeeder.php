@@ -30,15 +30,15 @@ class TrainsTableSeeder extends Seeder
             $train->brand = $faker->words(2, true);
             $train->station_start = $faker->words(3, true);
             $train->station_arrive = $faker->words(3, true);
-            $train->time_start_at = $faker->time('H_i_s');
-            $train->time_arrive_at = $faker->time('H_i_s');
+            $train->time_start_at = $faker->time('H:i');
+            $train->time_arrive_at = $faker->time('H:i');
             $train->train_code = $faker->lexify();
             $train->train_carriages_num = $faker->randomDigitNot(0);
             $train->station_start = $faker->words(3, true);
             $train->status_ontime = $faker->numberBetween(0, 1);
             $train->status_deleted = $faker->numberBetween(0, 1);
-            $train->status_deleted = $faker->date('Y_m_d');
-            $train->test = $faker->words();
+            $train->date = $faker->date('Y_m_d');
+            $train->test = $faker->words(2, true);
 
             $train->save();
         }
